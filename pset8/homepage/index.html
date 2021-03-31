@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <title>Nathan's Website</title>
+</head>
+
+<body>
+    <div class="mainpage">
+        <div class="header">
+            <h3>Nathan de Silos Bernal Papavero</h3>
+            <nav class="navbar">
+                <a href="home.html">Home</a>
+                <a href="education.html">University</a>
+                <a href="experience.html">Jobs</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+
+        <div class="middle">
+            <h1>Welcome!!</h1>
+
+            <p>This is my website where I'll tell you a little about me. Fisrtly tell me your name, please!</p>
+
+            <form>
+                <input type="text" id="input_name" />
+                <button type="button" onclick="leo()">Send</button>
+            </form>
+
+            <div class="brennoli">
+                <h2 id= "hidden" style="display: none;">Nice to meet you <b id="name"></b>!</h2>
+
+                <h3>Who are you, Nathan?</h3>
+
+                <p>My name is Nathan and I'm from Brazil. I'm 21 years old.</p>
+
+                <h4>Here is a photo of me that you can look.</h4>
+
+                <p>Incluir um botão aqui.</p>
+            </div>
+
+        </div>
+    </div>
+    <script>
+        function leo() {
+            let inputname = document.getElementById('input_name')
+            let newname = document.getElementById('name')
+            inputname = inputname.value
+            newname.innerHTML = inputname
+            let hidden = document.getElementById('hidden')
+            hidden.setAttribute('style','display: initial;')
+         
+        }
+
+    </script>
+</body>
+
+</html>

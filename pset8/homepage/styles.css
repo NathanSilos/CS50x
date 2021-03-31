@@ -1,0 +1,49 @@
+body {
+    background-color: #666565;
+    color: white;
+}
+
+.mainpage {
+    width: 80%;
+    margin: 0 auto;
+    padding: 15px 0;
+    text-align: center;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+    height: 30px;
+    margin: 5px 0;
+}
+
+.navbar {
+    height: 36px;
+}
+.navbar > a {
+    margin: 0 5px;
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.navbar > a:hover {
+    font-size: 20px;
+    transition: 400;
+    text-decoration: none;
+    color: #ccc;
+    padding: 0;
+}
+
+.middle {
+    padding: 30px 0;      
+}
+.hyperlink {
+    color: purple;
+}
+
+.brennoli {
+    padding: 50px 0;
+}
