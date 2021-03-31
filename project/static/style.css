@@ -1,0 +1,43 @@
+#nome
+{
+    /* name color*/
+    color: #8BAD20;
+}
+
+.menu
+{
+    font-weight: bold;
+}
+
+.cabecalho
+{
+    padding: 5px 20px;
+}
+
+.image
+{
+    margin-left: 33%;
+    margin-right: 33%;
+    margin-top: 2%;
+}
+.container
+{
+    padding-top: 80px;
+    color: white;
+}
+
+.navcolor
+{
+    background-color: #8BAD20;
+}
+
+.color
+{
+    background-color: #383838;
+    color: white;
+}
+
+.uppercase
+{
+    text-transform: uppercase;
+}

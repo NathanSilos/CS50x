@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+        <!-- Bootstrap JS -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+
+        <link href="/static/style.css" rel="stylesheet">
+
+        <title>
+            Time Sheet: {% block title %}{% endblock%}
+        </title>
+
+    </head>
+    <body>
+        <div class="container-fluid p-0">
+            <div class="row">
+                <nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap shadow">
+                        <a class="navbar-brand fs-3 ml-4 cabecalho" href="#">Intelipost</a>
+                        <!--Concertar para ficar no end da página-->
+                        {% if session.user_id %}
+                            <a class="nav-link text-end" href="/logout">Log Out</a>
+                        {% else %}
+                        <div class="text-end d-flex flex-row bd-highlight mb-2">
+                            <a class="nav-link" href="/register">Register</a>
+                            <a class="nav-link" href="/login">Log In</a>
+                        </div>
+                        {% endif %}
+                </nav>
+            </div>
+
+            <div class="row justify-content-center image color">
+                <img alt="{{ top }}" class="border" src="http://memegen.link/custom/{{ top | urlencode }}/{{ bottom | urlencode }}.jpg?alt=https://api.memegen.link/images/rollsafe.jpg" title="{{ top }}">
+            </div>
+        </div>
+
+
+        <!--<footer class="small text-center text-muted mt-5">
+            Made by Nathan Silos, a brazilian developer (2021).
+        </footer>-->
+        <footer class="footer mt-auto py-3">
+          <div class="container text-center">
+            <span class="small text-muted">Made by Nathan Silos, a brazilian developer (2021).</span>
+          </div>
+        </footer>
+    </body>
+</html>

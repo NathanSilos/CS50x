@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Stocks
+{% endblock %}
+
+{% block main %}
+    <h2>All your Stocks</h2>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Symbol</th>
+                    <th>Name</th>
+                    <th>Shares</th>
+                    <th>Price</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for stock in stocks %}
+                    <tr>
+                        <td>{{ stock.symbol }}</td>
+                        <td>{{ stock.name }}</td>
+                        <td>{{ stock.shares }}</td>
+                        <td>{{ stock["price"] }}</td>
+                        <td>{{ "$%.2f"|format( stock["price"] * stock.shares ) }}</td>
+                    </tr>
+                {% endfor %}
+                <tr>
+                        <td>CASH</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>{{  "$%.2f"|format(cash[0].cash) }}</td>
+                </tr>
+                <tr>
+                        <td><b>Total</b></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>{{ "$%.2f"|format(total) }}</td>
+                </tr>
+            </tbody>
+        </table>
+{% endblock %}

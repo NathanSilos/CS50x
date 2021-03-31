@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Stocks
+{% endblock %}
+
+{% block main %}
+    <h2>All your Stocks</h2>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Symbol</th>
+                    <th>Name</th>
+                    <th>Shares</th>
+                    <th>Price</th>
+                    <th>Operation</th>
+                    <th>Transacted</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for transact in info %}
+                    <tr>
+                        <td>{{ transact.symbol }}</td>
+                        <td>{{ transact.name }}</td>
+                        <td>{{ transact.shares }}</td>
+                        <td>{{ transact.price }}</td>
+                        <td>{{ transact.time }}</td>
+                        <td>{{ transact.operation }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+{% endblock %}
